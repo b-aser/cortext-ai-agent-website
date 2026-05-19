@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+:root {
+  --cream: #F5F0E8;
+  --cream-dark: #E8E2D6;
+  --forest: #1C3D0F;
+  --forest-mid: #2D5016;
+  --forest-deep: #14300A;
+  --amber-accent: #F59E0B;
+  --green-accent: #22C55E;
+  --red-dot: #EF4444;
+}
+
+@theme inline {
+  --color-cream: var(--cream);
+  --color-cream-dark: var(--cream-dark);
+  --color-forest: var(--forest);
+  --color-forest-mid: var(--forest-mid);
+  --color-forest-deep: var(--forest-deep);
+  --color-amber-accent: var(--amber-accent);
+  --color-green-accent: var(--green-accent);
+  --color-red-dot: var(--red-dot);
+
+  --font-serif: var(--font-instrument-serif);
+  --font-script: var(--font-caveat);
+  --font-sans: var(--font-poppins);
+}
+
+html, body {
+  background: var(--cream);
+  color: var(--forest);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--forest);
+  color: var(--cream);
+}
+
+/* ---------- Animations ---------- */
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up { opacity: 0; animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.d1 { animation-delay: 0.1s; }
+.d2 { animation-delay: 0.25s; }
+.d3 { animation-delay: 0.4s; }
+.d4 { animation-delay: 0.55s; }
+.d5 { animation-delay: 0.7s; }
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50%      { transform: translateY(-14px) rotate(3deg); }
+}
+.animate-float { animation: float 5s ease-in-out infinite; }
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+.animate-float-slow { animation: floatSlow 7s ease-in-out infinite; }
+
+@keyframes pulseDot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50%      { transform: scale(1.4); opacity: 0.5; }
+}
+.animate-pulse-dot { animation: pulseDot 1.8s ease-in-out infinite; }
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.3; }
+}
+.animate-blink { animation: blink 1.4s ease-in-out infinite; }
+
+@keyframes bob3d {
+  0%, 100% { transform: rotateY(-12deg) rotateX(8deg) translateY(0); }
+  50%      { transform: rotateY(12deg) rotateX(-4deg) translateY(-18px); }
+}
+.animate-bob-3d { animation: bob3d 8s ease-in-out infinite; transform-style: preserve-3d; }
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.animate-spin-slow { animation: spinSlow 22s linear infinite; }
+
+@keyframes dashFlow {
+  to { stroke-dashoffset: -200; }
+}
+.animate-dash { stroke-dasharray: 6 8; animation: dashFlow 10s linear infinite; }
+
+@keyframes barGrow {
+  from { transform: scaleY(0.15); }
+  to   { transform: scaleY(1); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-2deg); }
+  50%      { transform: rotate(2deg); }
+}
+.animate-wiggle { animation: wiggle 3s ease-in-out infinite; }
+
+/* Hero hand-drawn underline path */
+.hand-underline path {
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+  animation: drawLine 2.2s 0.6s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+@keyframes drawLine {
+  to { stroke-dashoffset: 0; }
+}
+
+/* Noise paper texture */
+.paper-grain {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(28,61,15,0.06) 1px, transparent 0);
+  background-size: 4px 4px;
+}
+
+/* Card lift */
+.lift {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, background-color 0.3s;
+}
+.lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 50px -20px rgba(28, 61, 15, 0.25);
+}
+
+/* 3D card tilt */
+.tilt-3d {
+  transform-style: preserve-3d;
+  perspective: 1200px;
+}
+.tilt-3d > * {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.tilt-3d:hover > * {
+  transform: rotateY(-8deg) rotateX(6deg);
+}
+
+/* Scroll-driven counter container */
+.count-up {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Hide scrollbar on horizontal scrollers */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }

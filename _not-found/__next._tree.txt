@@ -1,2 +1,2 @@
-:HL["/_next/static/chunks/035g5eyyssmja.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"Ej5H_Iu_779kvt04Fj5KM"}
+:HL["/cortext-ai-agent-website/_next/static/chunks/035g5eyyssmja.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"A_kds317lC9AtZ05Ybliz"}

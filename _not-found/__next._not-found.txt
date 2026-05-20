@@ -1,5 +1,5 @@
 1:"$Sreact.fragment"
-2:I[79456,["/_next/static/chunks/161rknd8r49ar.js","/_next/static/chunks/01xrw75ps3~v7.js"],"default"]
-3:I[11532,["/_next/static/chunks/161rknd8r49ar.js","/_next/static/chunks/01xrw75ps3~v7.js"],"default"]
+2:I[79456,["/cortext-ai-agent-website/_next/static/chunks/161rknd8r49ar.js","/cortext-ai-agent-website/_next/static/chunks/01xrw75ps3~v7.js"],"default"]
+3:I[11532,["/cortext-ai-agent-website/_next/static/chunks/161rknd8r49ar.js","/cortext-ai-agent-website/_next/static/chunks/01xrw75ps3~v7.js"],"default"]
 4:[]
-0:{"rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"isPartial":false,"staleTime":300,"varyParams":"$W4","buildId":"Ej5H_Iu_779kvt04Fj5KM"}
+0:{"rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"isPartial":false,"staleTime":300,"varyParams":"$W4","buildId":"A_kds317lC9AtZ05Ybliz"}

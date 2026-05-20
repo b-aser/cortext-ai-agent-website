@@ -1,7 +1,12 @@
 self.__BUILD_MANIFEST = {
   "__rewrites": {
     "afterFiles": [],
-    "beforeFiles": [],
+    "beforeFiles": [
+      {
+        "source": "/cortext-ai-agent-website//_next/:path+",
+        "destination": "/cortext-ai-agent-website/_next/:path+"
+      }
+    ],
     "fallback": []
   },
   "sortedPages": [

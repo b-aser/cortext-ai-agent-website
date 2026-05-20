@@ -12,4 +12,4 @@
 :HL["/cortext-ai-agent-website/_next/static/media/e2334d715941921e-s.p.12skym0rqknxy.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/cortext-ai-agent-website/_next/static/media/e41d5df559864f9e-s.p.0gq7fw9.sy_5..woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/cortext-ai-agent-website/_next/static/media/edcf447d6990da7e-s.p.0rmnzjlzsvg7u.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"qUm990tIzqDTVC8634MCf"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"TQcHl2qXla2ClBfJZT0QC"}

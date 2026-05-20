@@ -6,12 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "predeploy": "npm run build",
-    "deploy": "next build && touch out/.nojekyll && gh-pages -d out"
+    "lint": "eslint"
   },
   "dependencies": {
-    "cortexa-landing": "link:",
     "lucide-react": "^1.14.0",
     "next": "16.2.6",
     "react": "19.2.4",

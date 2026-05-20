@@ -1,13 +1,13 @@
-import type { NextConfig } from "next";
+// next.config.js
+const isProd = process.env.NODE_ENV === 'production';
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-
-const nextConfig: NextConfig = {
-  output: "export",
-  basePath,
-  assetPrefix: basePath ? `${basePath}/` : undefined,
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export',        // Static HTML export (required for GitHub Pages)
+  basePath: isProd ? '/cortext-ai-agent-website' : '',
+  assetPrefix: isProd ? '/cortext-ai-agent-website/' : '',
   images: {
-    unoptimized: true,
+    unoptimized: true,     // GitHub Pages can't run Next.js image optimization
   },
 };
 

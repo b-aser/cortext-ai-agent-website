@@ -1,6 +1,6 @@
 "use client";
 
-import { CarTaxiFront, HouseIcon, ArrowRightIcon, CirclePlay , VideoPlayIcon} from "lucide-react";
+import { ArrowRightIcon, CirclePlay } from "lucide-react";
 
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
@@ -9,7 +9,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative h-screen overflow-hidden pb-16 pt-28 sm:pt-32 lg:pt-36 paper-grain"
+      className="relative h-screen overflow-hidden pb-16 pt-28 sm:pt-32 lg:pt-36 paper-grain my-auto"
     >
       {/* Soft warm radial */}
       <div
@@ -21,13 +21,9 @@ export function Hero() {
         }}
       />
 
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
-        
-
+      <div className="relative mx-auto  max-w-7xl px-6 lg:px-10">
         {/* Centered headline */}
         <div className="relative mx-auto max-w-5xl text-center">
-          
-
           <h1 className="fade-up d2 leading-[0.88] tracking-[-0.035em] text-forest">
             <span className="block font-medium text-[5rem] sm:text-[7rem] md:text-[8rem] lg:text-[10rem] tracking-tighter">
               DESIGN OF
@@ -35,7 +31,10 @@ export function Hero() {
             <span className="relative mt-2 inline-block">
               <span
                 className="relative z-10 italic text-forest"
-                style={{ fontFamily: "var(--font-caveat), cursive", fontWeight: 700 }}
+                style={{
+                  fontFamily: "var(--font-caveat), cursive",
+                  fontWeight: 700,
+                }}
               >
                 <span className="text-[5rem] sm:text-[7rem] md:text-[8rem] lg:text-[10rem] leading-none">
                   Head
@@ -67,7 +66,7 @@ export function Hero() {
         </div>
 
         {/* Two-column lower band */}
-        <div className="relative mt-10 grid grid-cols-1 items-start gap-12 lg:mt-20 lg:grid-cols-12">
+        <div className="relative mt-10 grid grid-cols-1 items-start gap md:gap-12 lg:mt-20 lg:grid-cols-12">
           {/* Left: copy + CTAs */}
           <div className="fade-up d3 lg:col-span-5">
             <p className="max-w-md text-[1rem] leading-relaxed text-forest/70">
@@ -87,12 +86,10 @@ export function Hero() {
                 Request a demo
               </Button>
             </div>
-
-            
           </div>
 
           {/* Right: 3D floating visual cluster */}
-          <div className="relative lg:col-span-7 hidden md:block">
+          <div className="relative lg:col-span-7">
             <HeroVisual />
           </div>
         </div>
@@ -115,24 +112,30 @@ function SparkIcon({ className = "" }: { className?: string }) {
 function HeroVisual() {
   return (
     <div className="relative mx-auto h-[460px] w-full max-w-[680px]">
-      
       {/* Support Chart card */}
       <div className="absolute right-0 top-12 z-10 w-[330px] fade-up d4">
         <div className="bg-gradient-to-b from-black/60 to-black/5 border-2 border-white/15 rounded-2xl p-4">
-            <video src="/Video/demo.mp4" className="w-full h-full bg-transparent" autoPlay muted loop></video>
-            
-                <CirclePlay  className="bg-white/30 rounded-full border border-white/5 h-10 w-10 text-white/70 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
-            
-            <div className="flex flex-col w-full h-full mt-2">
-                <span className="text-sm">
-                    Understanding the course of acne and how to treat it
-                </span>
-                <p className="text-xs flex flex-row items-center gap-1 mt-1"> Read more <ArrowRightIcon className="h-3.5 w-3.5" /></p>
-            </div>
+          <video
+            src="/Video/demo.mp4"
+            className="w-full h-full bg-transparent"
+            autoPlay
+            muted
+            loop
+          ></video>
+
+          <CirclePlay className="bg-white/30 rounded-full border border-white/5 h-10 w-10 text-white/70 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+
+          <div className="flex flex-col w-full h-full mt-2">
+            <span className="text-sm">
+              Understanding the course of acne and how to treat it
+            </span>
+            <p className="text-xs flex flex-row items-center gap-1 mt-1">
+              {" "}
+              Read more <ArrowRightIcon className="h-3.5 w-3.5" />
+            </p>
+          </div>
         </div>
       </div>
-
-      
     </div>
   );
 }

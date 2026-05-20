@@ -1,6 +1,6 @@
 import type { ButtonHTMLAttributes, ReactNode } from "react";
 
-type Variant = "primary" | "ghost" | "cream" | "outlineCream" | "dark";
+type Variant = "primary" | "ghost" | "cream" | "outlineCream" | "dark" | "outline";
 type Size = "md" | "lg";
 
 const base =
@@ -19,9 +19,9 @@ const variants: Record<Variant, string> = {
   cream:
     "bg-cream text-forest hover:bg-white shadow-[0_10px_30px_-10px_rgba(0,0,0,0.25)] hover:-translate-y-0.5",
   outlineCream:
-    "border border-forest text-forest hover:bg-forest hover:text-cream",
+    "border border-forest text-forest hover:bg-forest hover:text-cream hover:-translate-y-0.5",
   outline:
-  "border border-cream/60 text-cream hover:bg-forest hover:text-cream",
+    "border border-cream/60 text-cream hover:bg-forest hover:text-cream hover:-translate-y-0.5",
   dark:
     "bg-[#111] text-white hover:bg-black hover:-translate-y-0.5",
 };

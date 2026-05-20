@@ -59,6 +59,9 @@ html, body {
 .animate-marquee {
   animation: marquee 30s linear infinite;
 }
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
 
 @keyframes float {
   0%, 100% { transform: translateY(0) rotate(-3deg); }

@@ -143,7 +143,7 @@ export function AgentTypes() {
   );
 }
 
-function InlineCircle({ color, icon }: { color: string; icon: string }) {
+function InlineCircle({ color, icon }: { color: string; icon: any }) {
   return (
     <span
       className={`mx-2 inline-grid h-[1.05em] w-[1.05em] translate-y-[-0.05em] place-items-center rounded-full ${color} text-[0.55em] align-middle`}

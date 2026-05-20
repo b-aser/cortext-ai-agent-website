@@ -27,7 +27,14 @@ const TESTIMONIALS = [
             "A real team made up of experienced consumer investors and consumer of tech with complementary skill sets and a track record in investing and scaling USD 1Bn+ brands; we have built, operated.",
         name: "John Jackson",
         role: "CTO, ReoTech",
-        avatarColor: "#f59e0b",
+        avatarColor: "#981e00",
+    },
+    {
+        quote:
+            "A real team made up of experienced consumer investors and consumer of tech with complementary skill sets and a track record in investing and scaling USD 1Bn+ brands; we have built, operated.",
+        name: "Joana Jackson",
+        role: "CTO, ReoTech",
+        avatarColor: "#159e0b",
     },
 ];
 
@@ -42,10 +49,10 @@ const Testimonial = () => {
 
                 </h2>
 
-                <div className="mt-8 flex gap-8 overflow-x-auto px-10 pb-4 snap-x snap-mandatory scrollbar-hide max-w-7xl mx-auto py-10">
-                    {TESTIMONIALS.map((t) => (
+                <div className="mt-8 animate-marquee flex flex-nowrap gap-8 min-w-max px-10 pb-4 scrollbar-hide py-10 will-change-transform">
+                    {[...TESTIMONIALS, ...TESTIMONIALS].map((t, index) => (
                         <article
-                            key={t.name}
+                            key={`${t.name}-${index}`}
                             className="snap-start shrink-0 w-[80vw] sm:w-[340px] flex flex-col gap-8 relative rounded-2xl bg-forest-deep p-8 text-cream transition-all duration-300 hover:-translate-y-1"
                         >
                             <svg
@@ -82,6 +89,7 @@ const Testimonial = () => {
                         </article>
                     ))}
                 </div>
+                
 
                 <div className="mt-20 flex items-center justify-center gap-1.5 mx-auto">
                     <span className="h-1.5 w-6 rounded-full bg-forest" />
@@ -89,6 +97,7 @@ const Testimonial = () => {
                     <span className="h-1.5 w-1.5 rounded-full bg-forest/30" />
                 </div>
             </div>
+            
         </div>
     )
 }
